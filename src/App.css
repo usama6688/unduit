@@ -1,38 +1,219 @@
-.App {
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-image: url("./assets/homeBg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.logo {
+  height: 6rem;
+  width: 21.4rem;
+  cursor: pointer;
+}
+
+.heading {
+  margin: 1rem 0 2rem 0;
+  font-size: 2.7rem;
+  color: white;
+  font-weight: 500;
+}
+
+.subHeading {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: white;
+  font-weight: 500;
+  font-family: "campton", sans-serif;
+}
+
+.divBox {
+  background: rgb(0 0 0 / 34%);
+  padding: 3rem 2rem;
+  border-radius: 1.1rem;
+  margin-top: 1.5rem;
+}
+
+.inputBox:focus,
+.otpBox input:focus,
+.submitButton:focus {
+  outline: none;
+}
+
+.inputBox {
+  background-color: transparent;
+  border-radius: 1rem;
+  border: none;
+  flex: 1;
+  text-overflow: ellipsis;
+  padding: 1.2rem 1.9rem;
+  font-size: 1.4rem;
+  height: 4.5rem;
+  color: white;
+  text-indent: 3rem;
+  border: .1rem solid white;
+  width: 100%;
+}
+
+.icons {
+  position: absolute;
+  left: 1.6rem;
+  top: 1.3rem;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 3rem rgb(0 0 0 / 70%) inset !important;
+}
+
+.submitButton {
+  background: #EF5A3E 0% 0% no-repeat padding-box;
+  border-radius: 5rem;
+  border: 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: .8rem 0;
+  margin-top: 2rem;
+  color: white;
+  text-transform: capitalize;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  cursor: pointer;
+}
+
+.forgotLink {
+  border-bottom: .1rem solid white;
+  padding-bottom: 1rem;
+  letter-spacing: .1rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.otpBox input {
+  height: 5rem;
+  width: 5rem !important;
+  font-size: 1.8rem;
+  font-weight: 500;
+  border-radius: 1rem;
+  background-color: transparent;
+  color: white;
+  border: .1rem solid white;
+}
+
+.otpBox div {
+  justify-content: center;
+  gap: .7rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.orText {
+  font-size: 1.3rem;
+  color: white;
+  margin: 1.5rem 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.phoneIcon {
+  font-size: 3rem;
   color: white;
+  top: .8rem;
 }
 
-.App-link {
-  color: #61dafb;
+.fa-check {
+  position: absolute;
+  right: 2rem;
+  top: 1.5rem;
+  font-size: 1.5rem;
+  color: #EF5A3E;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.checkContainer {
+  display: block;
+  position: relative;
+  padding-left: 1.7rem;
+  margin-bottom: 1.2rem;
+  cursor: pointer;
+  font-size: 2.2rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-top: -4px;
+}
+
+/* Hide the browser's default checkbox */
+.checkContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: transparent;
+  border: .1rem solid white;
+  border-radius: .4rem;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkContainer input:checked~.checkmark {
+  background-color: transparent;
+  border: .1rem solid white;
+  border-radius: .4rem;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.checkContainer input:checked~.checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkContainer .checkmark:after {
+  left: 0.5rem;
+  top: 0.1rem;
+  width: .5rem;
+  height: 1rem;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }

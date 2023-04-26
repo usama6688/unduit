@@ -1,0 +1,26 @@
+.headerStyle {
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerStyle ul li {
+    list-style-type: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+}
+
+.headerStyle ul li:hover {
+    color: #EF5A3E;
+}
+
+.headerStyle ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    margin-bottom: 0;
+}
